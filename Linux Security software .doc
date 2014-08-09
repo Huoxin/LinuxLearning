@@ -1,0 +1,27 @@
+1.反病毒保护软件：ClamAV
+  1)安装
+    #apt-get install clamav-daemon
+  2)将病毒库更新为最新
+    #freshclam
+  3)启动 ClamAV
+    #clamscan
+
+2.rkhunter 防御 rootkit
+  1)安装
+    #aptitude install rkhunter
+  2)检查系统
+    #rkhunter --check
+  3)查看报告
+    #cat /var/log/rkhunter.log
+  3)更新rkhunter
+    #rkhunter --update
+  
+3. Tiger 基于配置基准
+  1)安装
+    #aptitude -y install tiger
+  2)启动扫描
+    #tiger
+  3)查看报告
+    #cat /var/log/tiger/文件名
+
+
