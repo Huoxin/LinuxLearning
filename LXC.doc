@@ -1,0 +1,34 @@
+    LXC 中文名称就是 Linux 容器工具，容器可以提供轻量级的虚拟化，以便隔离进程和资源。使用 LXC 的优点就是不需要安装太多的软件包，使用过程也不会占用太多的资源， LXC 是在 Linux 平台上基于容器的虚拟化技术的未来标准，最初的 LXC 技术是由 IBM 研发的，目前已经进入 Linux 内核主线，这意味着 LXC 技术将是目前最有竞争力的轻量级虚拟容器技术。
+    
+    LXC 在资源管理方面依赖 Linux 内核的 cgroups (Control Groups) 系统，cgroups 系统是 Linux 内核提供的一个基于进程组的资源管理的框架，可以为特定的进程组限定可以使用的资源。cgroups 也是 LXC 为实现虚拟化所使用的资源管理手段。
+    
+搭建第一个 LXC 虚拟计算机
+1) 安装lxc
+#apt-get install lxc    
+2)建立一个 Ubuntu Server LXC 虚拟计算机系统
+#lxc-create -t ubuntu -n xhzlxc
+3)启动 LXC 虚拟计算机
+#lxc-start -n xhzlxc
+用户名和密码都是ubuntu
+4)停止运行一个容器
+#lxc-stop -n xhzlxc
+5)暂停或恢复一个容器
+#lxc-freeze -n xhzlxc
+#lxc-unfreeze -n xhzlxc
+6)销毁一个容器
+#lxc-destroy -n xhzlxc
+7)查看容器信息
+# lxc-info -n xhzlxc2
+Name:           xhzlxc2
+State:          RUNNING
+PID:            30022
+IP:             10.0.3.195
+CPU use:        2.10 seconds
+BlkIO use:      180.00 KiB
+Memory use:     8.72 MiB
+Link:           vethOBV5D3
+ TX bytes:      3.37 KiB
+ RX bytes:      7.50 KiB
+ Total bytes:   10.87 KiB
+
+参阅：《Linux 容器的建立和简单管理》http://www.ibm.com/developerworks/cn/linux/1312_caojh_linuxlxc/index.html
