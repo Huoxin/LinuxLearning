@@ -1,0 +1,11 @@
+一键安装 Ubuntu 软件
+
+浏览器设置：
+
+1)opera 浏览器用户，需先进行如下设置： 打开首选项，高级，程序，添加，协议填 apt ，程序填 /usr/bin/apturl 即可 
+
+2)firefox，在点击apturl软件时，会直接弹出对话框让选择程序，这时选择/usr/bin/apturl
+
+
+参考：置http://wiki.ubuntu.org.cn/Apturl
+https://help.ubuntu.com/community/AptURL
