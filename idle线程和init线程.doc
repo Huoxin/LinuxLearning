@@ -1,0 +1,9 @@
+    Linux系统启动时，原始线程(pid=0)，通过fork()创建pid=1的init进程，然后原始线程调用cpu_idle()演变为idle进程(pid还是0)。init进程为每个从处理器创建一个idle进程(pid=0)，idle进程随后调用cpu_idle。之后init进程演化为/sbin/init。
+    
+    主处理器的idle进程由原始进程(pid=0)演变而来；从处理器的idle进程由init进程fork()得到，但它们的pid都是0。
+    
+    idle进程的优先级最低；系统空闲时间，就是idle进程的运行时间。
+    
+    idle进程默认使用hlt指令，使cpu处于暂停状态，等待硬件中断发生时恢复，从而达到节能的目的。
+    
+    
