@@ -1,0 +1,35 @@
+2014-8-14
+1.安装软件包
+  addr2line; Pvtrace; Graphviz.
+  
+  pvtrace工具的安装： 
+  $ unzip pvtrace.zip -d pvtrace
+  $ cd pvtrace
+  $ make
+  $ make install
+  
+2.实践
+源程序文件test.c， instrument.c是pvtrace工具解压后目录中的一个文件.将instrument.c放在test.c同一目录下。
+
+ 1:  $ ls
+ 2:  instrument.c    test.c
+ 3:  $ $ gcc -g -finstrument-functions test.c instrument.c -o test
+ 4:  $ ./test
+ 5:  $ ls
+ 6:  instrument.c     test.c
+ 7:  test             trace.txt
+ 8:  $ pvtrace test
+ 9:  $ ls
+10:  graph.dot        test           trace.txt
+11:  instrument.c     test.c
+12:  $ dot -Tjpg graph.dot -o graph.jpg
+13:  $ ls
+14:  graph.dot        instrument.c   test.c
+15:  graph.jpg        test           trace.txt
+16:  $
+
+
+pvtrace下载地址：
+http://www.ibm.com/developerworks/apps/download/index.jsp?contentid=88615&filename=pvtrace.zip&method=http&locale=zh_CN
+
+参考《用 Graphviz 可视化函数调用》http://www.ibm.com/developerworks/cn/linux/l-graphvis/
