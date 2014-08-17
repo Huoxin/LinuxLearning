@@ -1,4 +1,4 @@
 LinuxLearning
 =============
 
-My road to learning Linux
+My road to learn Linux
