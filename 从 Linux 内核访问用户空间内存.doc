@@ -10,3 +10,4 @@
   strncpy_from_user	从用户空间复制一个字符串到内核
 
 
+参考：http://www.ibm.com/developerworks/cn/linux/l-kernel-memory-access/index.html
