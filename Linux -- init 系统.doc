@@ -4,3 +4,4 @@
 
 
 各种 shell 程序都支持一个自动运行的启动脚本，比如~/.bashrc
+在 Upstart 系统中，需要修改/etc/init/rc-sysinti.conf 中的 DEFAULT_RUNLEVEL 这个参数，以便修改默认启动运行级别。
