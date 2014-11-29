@@ -1,0 +1,2 @@
+1.linux gcc 编译时，如果用到了 math中的函数，要手工加入函数库链接:-lm，即：
+    gcc  -o tt  your_prog.c -lm
